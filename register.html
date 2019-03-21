@@ -1,130 +1,56 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="css/register.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/registera.css">
+    <title>注册小米账号</title>
 </head>
 <body>
-<div id="bg">
-    <div id="logo">
-			 <a href="#"></a>
-       <h1>注册小米账号</h1>
-        <form id="form" action="#">
+    <div id="myRegister">
+        <div><a href="#" class='ercode'></a></div>
+        <ul>
+            <li><a href="#"><img src="img/logo.jpg"></a></li>
+            <li style="font-size: 30px"><h4>注册小米账号</h4></li>
+        </ul>
+        <br>
+        <div>
+            <div class='register_area'>
+                <form id="register_form">
+                    <label for="user_name" class='labelbox'>
+                        <input type="text" placeholder="请输入用户名"  name="user_name" id="user_name">
+                    </label>
+                    <br><br>
+                    <label for="user_pwd" class='valibox'>
+                        <input type="password" placeholder="请输入密码"  name="user_pwd" id="user_pwd">
+                    </label>
+                    <br><br>   
+                    <label for="user_rePwd" class='valibox'>
+                        <input type="password" placeholder="请再次输入密码"  name="user_rePwd" id="user_pwd">
+                    </label>
+                    <br><br>
+                    <input type="button" class="btn" value="立即注册" id="register">
+                </form>
+            </div>
+            <div class='msg'>
                 <div>
-                    <label  for="username">&nbsp;用户名:</label>
-                    <input id="username" type="text" autofocus placeholder="请输入用户名" required pattern="^[a-zA-Z0-9]{8,16}$">
-                    <label id="usernameTip" class="label-last hide default">请输入8至16位的英文或数字.</label>
-
-                </div> 
-
-							<div>
-                    <label for="password">&nbsp;密&nbsp;码:</label>
-                    <input id="password" type="password" placeholder="请输入密码" required pattern="^[0-9]{6,12}$">
-                    <label id="passwordTip" class="label-last hide default">请输入6至12位的数字.</label>
+                    <span>点击“立即注册”，即表示您同意并愿意遵守小米 <a href="#" class='outer_link'><b>用户协议</b> 和 <b>隐私政策</b></a></span>
                 </div>
-
-
-                <div>
-                    <label for="phone">&nbsp;手机号:</label>
-                    <input id="phone" type="text" placeholder="请输入手机号码" required pattern="^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$">
-                    <label id="phoneTip" class="label-last hide default">请输入手机号码.</label>
-                </div>
-
-
-                <div>
-                    <label for="email">电子邮件:</label>
-                    <input id="email" type="email" placeholder="请输入电子邮件" >
-                    <label id="emailTip" class="label-last hide default">请输入你的电子邮件地址.</label>
-                </div>
-            
-                <div>
-                    <input type="submit" value="提交注册" class="btn">
-                </div>
-        </form>
+            </div>   
+        </div>
     </div>
-</div>
-
-<script>
-    var username=document.getElementById("username");
-    var usernameTip=document.getElementById("usernameTip");
-    formValidity(username,usernameTip,{
-        "default" : "请输入8至16位的英文或数字.",
-        "error" : "用户名"
-    });
-
-    var password = document.getElementById("password");
-    var passwordTip = document.getElementById("passwordTip");
-    password.onfocus = function(){
-        passwordTip.className = "label-last show default";
-        passwordTip.innerHTML = "请输入6至12位的数字.";
-    }
-
-    password.onblur = function(){
-        if(password.validity.valid){
-            passwordTip.className = "label-last show success";
-            passwordTip.innerHTML = "密码输入正确.";
-        }else if(password.validity.valueMissing){
-            passwordTip.className = "label-last show error";
-            passwordTip.innerHTML = "密码不能为空.";
-        }else if(password.validity.patternMismatch){
-            passwordTip.className = "label-last show error";
-            passwordTip.innerHTML = "密码输入有误.";
-        }
-    }
-
-		var phone = document.getElementById("phone");
-    var phoneTip = document.getElementById("phoneTip");
-    phone.onfocus = function(){
-        phoneTip.className = "label-last show default";
-        phoneTip.innerHTML = "请输入手机号码.";
-    }
-
-    phone.onblur = function(){
-        if(phone.validity.valid){
-            phoneTip.className = "label-last show success";
-            phoneTip.innerHTML = "手机号输入正确.";
-        }else if(phone.validity.valueMissing){
-            phoneTip.className = "label-last show error";
-            phoneTip.innerHTML = "手机号不能为空.";
-        }else if(phone.validity.patternMismatch){
-            phoneTip.className = "label-last show error";
-            phoneTip.innerHTML = "手机号输入有误.";
-        }
-    }
-
-		var email = document.getElementById("email");
-    var emailTip = document.getElementById("emailTip");
-    email.onfocus = function(){
-        emailTip.className = "label-last show default";
-        emailTip.innerHTML = "请输入邮箱. (可选)";
-    }
-
-
-
-
-
-    function formValidity(elem,elemTip,text){
-        elem.onfocus = function(){
-            elemTip.className = "label-last show default";
-            elemTip.innerHTML = text.default;;
-        }
-        elem.onblur = function(){
-            if(elem.validity.valid){
-                elemTip.className = "label-last show success";
-                elemTip.innerHTML = text.error+"输入正确.";
-            }else if(elem.validity.valueMissing){
-                elemTip.className = "label-last show error";
-                elemTip.innerHTML = text.error+"不能为空.";
-            }else if(elem.validity.patternMismatch){
-                elemTip.className = "label-last show error";
-                elemTip.innerHTML = text.error+"输入有误.";
-            }
-        }
-    }
-
-</script>
-
-
+    <div class='foot_info'>
+        <ul>
+            <li><a href="#" class='current'>简体</a>|</li>
+            <li><a href="#">繁体</a>|</li>
+            <li><a href="#">English</a>|</li>
+            <li><a href="#">常见问题</a></li>
+        </ul>
+        <p><span>小米公司版权所有-京ICP备10046444- <a href="#"><img src="img/ghs.png" alt=""></a></span>京公网安备11010802020134号</p>
+    </div>
+    
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/xiaomi.js"></script>
 </body>
 </html>
