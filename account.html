@@ -5,49 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/account.css">
-    <title>小米注册登录</title>
+    <title>小米账号登录</title>
 </head>
 <body>
-<div id="tnav"> 
+<div id="tna"> 
     <!-- 顶部头 -->
     <div id="nav">
         <div id="nav_box">
             <ul>
                 <li>
-                    <a class="nav_a_img" href="#"><img src="./img/logo.png"></a>
+                    <a href="#">
+                        <img class="nav_a_img" src="./img/logo.png">
+                    </a>
                 </li>
                 <li>
                     <h2>小米商城</h2>
                     <p>让每个人都能享受科技</p>
+                </li>
+                <li>
+                    <a href="#">
+                        <img  class="nav_box_img" src="./img/mi_logo/avatar.png">
+                    </a> 
+                    <div id="into" ></div>
                 </li>
             </ul>
         </div>
     </div>
     <!-- 背景图 -->
     <div id="center">
-        <a href="#"><i></i></a>
+            <!-- <div class="sss"> -->
+                <a href="#"><i></i></a>
+            <!-- </div> -->
         <div id="center_img">
             <img src="./img/WechatIMG603.png" alt="">
         </div>
         <div class="center_logon">
-            <form action="#">
-                <ul>
+            <form action="#" >
+                    <!-- autocomplete="on" -->
+                <ul> 
                     <li class="center_li_a">
                         <a class="center_li_az" href="#">账号登录</a>
                         <span class="li_line"></span>
                         <a href="#">扫码登录</a>
                     </li>
                     <li class="center_li_pt">
-                        <input type="text" name="" value="" placeholder="邮箱/手机号码/小米ID">
+                        <input type="text" name="uname" value="" placeholder="邮箱/手机号码/小米ID" id="uname">
                     </li>
                     <li class="center_li_pt">
-                        <input type="password" name="" value="" placeholder="请输入密码">
+                        <input type="password" name="upwd" value="" placeholder="请输入密码" id="upwd">
                     </li>
                     <li class="center_li_btn">
-                        <button>登&nbsp;&nbsp;&nbsp;&nbsp;录</button>
+                        <button onclick="login()">登&nbsp;&nbsp;&nbsp;&nbsp;录</button>
                     </li>
                     <li class="center_li_p">
-                        <a href="#" class="center_pa">手机短信登录/注册</a>
+                        <a href="register.html" target="_blank" class="center_pa">手机短信登录/注册</a>
                         <a class="center_pb">立即注册 | 忘记密码？</a>
                     </li>
                     <li class="center_li_c"><legend class="ttt">其他方式登录</legend></li>
@@ -75,5 +86,6 @@
         </div>
     </div>
 </div>
+<script src="js/ajax.js"></script>
 </body>
 </html>

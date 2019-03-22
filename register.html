@@ -16,26 +16,27 @@
         </ul>
         <br>
         <div>
-            <div class='register_area'>
-                <form id="register_form">
+            <div class='register_area' >
+                <!-- ajax不用写接口、请求（post get）action="" method="" -->
+                <form id="register_form" action="" method="" autocomplete="on">
                     <label for="user_name" class='labelbox'>
-                        <input type="text" placeholder="请输入用户名"  name="user_name" id="user_name">
+                        <input type="text" placeholder="请输入用户名"  name="uname" id="uname">
                     </label>
                     <br><br>
                     <label for="user_pwd" class='valibox'>
-                        <input type="password" placeholder="请输入密码"  name="user_pwd" id="user_pwd">
+                        <input type="password" placeholder="请输入密码"  name="upwd" id="upwd">
                     </label>
                     <br><br>   
                     <label for="user_rePwd" class='valibox'>
-                        <input type="password" placeholder="请再次输入密码"  name="user_rePwd" id="user_pwd">
+                        <input type="password" placeholder="请再次输入密码"  name="upwda" id="upwda">
                     </label>
                     <br><br>
-                    <input type="button" class="btn" value="立即注册" id="register">
+                    <input type="button" class="btn" value="立即注册" onclick="regiset()">
                 </form>
             </div>
             <div class='msg'>
                 <div>
-                    <span>点击“立即注册”，即表示您同意并愿意遵守小米 <a href="#" class='outer_link'><b>用户协议</b> 和 <b>隐私政策</b></a></span>
+                    <span>点击“立即注册”，即表示您同意遵守小米 <a href="#" class='outer_link'><b>用户协议</b> 和 <b>隐私政策</b></a></span>
                 </div>
             </div>   
         </div>
@@ -50,7 +51,7 @@
         <p><span>小米公司版权所有-京ICP备10046444- <a href="#"><img src="img/ghs.png" alt=""></a></span>京公网安备11010802020134号</p>
     </div>
     
-<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-<script src="js/xiaomi.js"></script>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/ajax.js"></script>
 </body>
 </html>
