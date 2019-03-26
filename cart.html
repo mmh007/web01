@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/cart1.css">
+    <title>我的购物车</title>
+</head>
+<body>
+    <div id="wrap"> 
+        <!-- 顶部头 -->
+        <div id="nav">
+            <div id="nav_box">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img class="nav_a_img" src="./img/logo.png" alt="小米官网">
+                        </a>
+                    </li>
+                    <li>
+                        <h1>我的购物车</h1>
+                        <p>温馨提示：产品是否购买成功，以最终下单为准哦，请尽快结算</p>
+                    </li>
+                    <li>
+                        <a class="nav_dl" href="account.html">登 录</a>
+                        <i></i>
+                        <a class="nav_zc" href="register.html">注 册</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img  class="nav_box_img" src="./img/mi_logo/avatar.png">
+                        </a> 
+                        <div id="into" ></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 楼层2 -->
+<div id="wrapa">
+    <div>
+        <div class="wrapa_span">
+            您的位置：
+            <span><a href="xiaomim.html">首页</a></span> > 
+            <span><a href="xiaomim.html">我的小米</a></span> > 我的购物车
+        </div>
+        <ul>
+            <li>1.查看购物车<span></span></li>
+            <li>2.确认订单信息<span></span></li>
+            <li>3.付款到支付宝<span></span></li>
+            <li>4.确认收货<span></span></li>
+            <li>5.评价<span></span></li>
+        </ul>
+    </div>
+    <!-- 楼层3（购物车） -->
+    <table>
+        <tr>
+            <th><input type="checkbox" value="全选">全选</th>
+            <th>商品名称</th>
+            <th>获积分</th>
+            <th>单价（元）</th>
+            <th>数量</th>
+            <th>小计（元）</th>
+            <th>操作</th>
+        </tr>
+        <!-- 店铺 1-->
+        <tr class="store-datail">
+            <!-- <td colspan="7"> -->
+                <!-- 店铺：<a href="#">优乐米家</a> -->
+                <!-- 卖家：<a href="#">米粉</a> -->
+                     <!-- <img src="./img/loading.gif"> -->
+            <!-- </td> -->
+        </tr>
+        <!-- 商品 -->
+        <tr>
+            <!-- 框 -->
+            <td><input type="checkbox"></td>
+            <!-- 图片详细 -->
+            <td class="baby">
+                <img src="./img/note1.png" class="cart_img">
+                <div class="baby-detail">
+                <p><a href="#">小米6X 标准高透贴膜 透明</a></p>
+                </div>
+            </td>
+            <!-- 积分 -->
+            <td class="integral">5</td>
+            <!-- 单价 -->
+            <td class="univalent">138.00</td>
+            <!-- 数量 -->
+            <td>
+                <button class="reduce" >-</button>
+                    <input type="text" value="1" readonly>
+                <button class="add">+</button>
+            </td>
+            <!-- 总价 -->
+            <td class="total">138.00元</td>
+            <!-- 删除 -->
+            <td><a href="#" class="delete">删除</a></td>
+        </tr>
+        <!-- 店铺 2 -->
+        <tr class="store-detail">
+            <!-- <td colspan="7">
+                店铺：<a href="#">香奈儿日记</a>
+                卖家：<a href="#">知乎消息</a>
+            </td> -->
+        </tr>
+        <!-- 商品 -->
+        <tr>
+           <td><input type="checkbox"></td>
+           <td class="baby">
+               <img src="./img/note2.png">
+               <div class="baby-detail">
+                    <p><a href="#">香奈儿手机快</a></p>
+               </div>
+           </td>  
+            <td class="integral">12</td>
+            <td class="univalent">265.00</td>
+            <td>
+                <button class="reduce">-</button>
+                    <input type="text" value="1" readonly>
+                <button class="add">+</button>
+                <td class="total">265.00元</td>
+                <td><a href="#" class="delete">删除</a></td>
+            </td>
+        </tr>
+        <!-- 店铺 3-->
+        <tr class="store-datail">
+            <!-- <td colspan="7">
+                店铺：<a href="#">高端黑客</a>
+                卖家：<a href="#">小米9</a>
+            </td> -->
+        </tr>
+        <!-- 商品 -->
+        <tr>
+            <!-- 框 -->
+            <td><input type="checkbox"></td>
+            <!-- 图片详细 -->
+            <td class="baby">
+                <img src="./img/note1.png" class="cart_img">
+                <div class="baby-detail">
+                    <p><a href="#">全网通版 6GB内存 64GB 樱花粉</a></p>
+                </div>
+            </td>
+            <!-- 积分 -->
+            <td class="integral">3</td>
+            <!-- 单价 -->
+            <td class="univalent">88.00</td>
+            <!-- 数量 -->
+            <td>
+                <button class="reduce" >-</button>
+                    <input type="text" value="1" readonly>
+                <button class="add">+</button>
+            </td>
+            <!-- 总价 -->
+            <td class="total">88.00元</td>
+            <!-- 删除 -->
+            <td><a href="#" class="delete">删除</a></td>
+        </tr>
+    </table>
+    <div class="bottom">
+        <div class="left">
+            <p class="deleteChecked"><a href="#">删除所选</a></p>
+        </div>
+        <div class="right">
+            <p>商品总价（不含运费）：<span class="totalPrice">419</span>元</p>
+            <!-- right_tot -->
+            <p>可获积分: <span class="totalIntegral">20</span>点</p>
+            <p class="buy"><a href="xiaomim.html">立即购买</a></p>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/catl.js"></script>
+</body>
+</html>

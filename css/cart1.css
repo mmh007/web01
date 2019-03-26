@@ -1,0 +1,234 @@
+/* ===============（通用样式）================== */
+body{
+    margin:0;
+    padding:0;
+    font:12px "microsoft yahei";
+    color:#666;
+}
+ul,li,p,h1,h2,h3,h4,h5,h6,dl,dd{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+input{
+    border:none;
+    padding:0;
+    margin:0;
+}
+/* 清除浮动 */
+.clear{clear:both;}
+
+
+/* 头部 */
+#wrap{
+    width: 100%;
+    height: 100px;
+    border-bottom: 2px solid #ff6700;
+}
+/* 顶部 */
+#nav{
+    margin: auto;
+    width: 1350px;
+    height: 80px;
+    background: #fff;
+    line-height: 40px;
+    position: relative;
+}
+ #nav_box>ul>li>a .nav_a_img{
+    width: 60px;
+    height: 60px;
+    margin-left: 50px;
+    margin-top: 21px;
+    /* border:3px solid red;  */
+}
+#nav #nav_box>ul>li>h1{
+    margin-left: 85px;
+    font-size: 27px;
+    margin-top: 15px;
+}
+#nav #nav_box>ul>li>a.nav_dl{
+    position: absolute;
+    box-sizing: border-box;
+    left: 1021px;
+    font-size: 15px;
+    top: 25px;
+    color: #000;
+    text-decoration: none;
+}
+#nav #nav_box>ul>li>a.nav_zc{
+    position: absolute;
+    top: 58px;
+    left: 1021px;
+    font-size: 15px;
+    color: #000;
+    text-decoration: none;
+}
+#nav #nav_box>ul>li>a.nav_dl:hover{
+    color: #ff6700;
+}
+#nav #nav_box>ul>li>a.nav_zc:hover{
+    color: #ff6700;
+}
+#nav_box>ul>li>a .nav_box_img{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    margin-top: 10px;
+    margin-left: 630px;
+    /* border:3px solid rgb(14, 13, 13);  */
+} 
+ #into{
+    position: absolute;
+    line-height: 15px;
+    width: 106px;
+    height: 20px;
+    margin-top: 65px;
+    margin-left: 602px;
+    text-align: center;
+    box-sizing: border-box;
+    border:1px dotted #666;
+} 
+#nav #nav_box>ul>li{
+    float: left;
+    margin-left: 17px;
+}
+#nav #nav_box>ul>li>h2{
+    font-size: 20px;
+}
+
+/* 楼层2 */
+#wrapa{
+    width: 1226px;
+    margin: 0 auto;
+}
+#wrapa div>div.wrapa_span{
+    margin: 15px 0;
+}
+#wrapa>div div>ul{
+    list-style: none;
+    font-size: 0;
+    width: 100%;
+}
+#wrapa>div>ul>li{
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    width: 242px;
+    background: #ccc;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    position: relative;
+    cursor: pointer;
+}
+#wrapa>div>ul>li:hover{
+    background: #ff6700;
+    color: #000;
+}
+#wrapa ul li:first-child{
+    background: #ff6700;
+}
+#wrapa ul li:first-child span{
+    background: #ff6700;
+}
+#wrapa ul li span{
+    position: absolute;
+    top: 2px;
+    right: -11px;
+    width: 18px;
+    height: 18px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotateZ(-45deg);
+    z-index: 1;
+}
+/* 楼层3（购物车） */
+table{
+    font-size: 12px;
+    width: 100%;
+}
+table tr:first-child{
+    margin-top: 20px;
+}
+table tr:nth-child(2n+1) td{
+    background: #f2f6f8;
+    border-bottom: 2px solid #d5f0d5;
+    text-align: center;
+}
+table tr td button{
+    vertical-align: middle;
+    cursor: pointer;
+    z-index: 100;
+}
+table tr td:nth-child(2) img{
+    width: 100px;
+    height: 60px;
+    
+}
+table tr td:nth-child(2){
+    width: 300px;
+}
+table .baby .baby-datail{
+    display: inline-block;
+    width: 200px;
+    transform: translate(-5px);
+    text-align: left;
+}
+table .baby .baby-datail p{
+    line-height: 20px;
+}
+table tr td input{
+    width: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+table tr .total{
+    font-weight: bold;
+    color: #ff6700;
+    font-size: 14px;
+}
+.bottom{
+    display: flex;
+    font-size: 12px;
+    position: relative;
+}
+.bottom .left{
+    flex: 1;
+}
+.bottom .left .deleteChecked{
+    width: 90px;
+    height: 25px;
+    text-align: center;
+    background: 25px;
+    line-height: 25px;
+    background: #f6f6f6;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.bottom .right{
+    flex: -1;
+    text-align: right;
+    margin-bottom: 100px;
+}
+.bottom .right .buy{
+    position: absolute;
+    right: 0;
+    width: 80px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    border: 1px solid #ccc;
+    background: #fe6400;
+    color: #fff;
+    border-radius: 5px;
+}
+a{
+    text-decoration: none;
+}
+.bottom span{
+    font-size: 18px;
+    font-weight: bold;
+    color: #fe6400;
+    left: 0px;
+}
